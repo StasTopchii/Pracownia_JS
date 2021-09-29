@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalkulator</title>
+<meta charset="utf-8" />
+<style type="text/css">
+#calculator {
+    background: #eaeaea;
+    margin: 0 auto;
+    padding: 35px 25px 35px 25px;
+    width: 200px;
+    text-align: center;
+}
+#calculator select {
+    padding: 10px;
+    width: 120px;
+}
+#calculator button {
+    padding: 10px;
+    width: 100px;
+}
+#calculator input[type="text"] {
+    padding: 10px;
+    width: 147px;
+    margin-bottom: 5px;
+}
+</style>
+<script>
+function Calculator(operator) 
+{
+    var wybor = podatek.value;
+    var a = document.getElementById('a').value; 
+    var result;
+
+    switch(wybor) 
+    {
+        case 'liniowy':
+                result = a*0.19;         
+        break;
+        case 'rycz20':
+                result = a*0.20;    
+        break;  
+        case 'rycz17':
+                result = a*0.17;    
+        break; 
+        case 'rycz8.5':
+                result = a*0.85;    
+        break; 
+        case 'rycz5.5':
+                result = a*0.55;    
+        break; 
+        case 'rycz3':
+                result = a*0.03;    
+        break; 
+        case 'rycz2':
+                result = a*0.02;    
+        break; 
+        case 'progresywny':
+        if(a>85528)
+            {
+                result = a*0.32;
+            }else
+                result = a*0.18;        
+        break;  
+    }
+ 
+    document.getElementById('result').value = '= ' + result;
+}
+</script>
+</head>
+<body>
+<form id="calculator">
+    <input type="text" id="a" placeholder="Pensja" />
+    <input type="text" id="result" placeholder="=" disabled="disabled" />
+    <select id="podatek" autofocus>
+        <option value="liniowy">Liniowy</option>
+        <option value="rycz20">Ryczalcz 20%</option>
+        <option value="rycz17">Ryczalcz 17%</option>
+        <option value="rycz8.5">Ryczalcz 8.5%</option>
+        <option value="rycz5.5">Ryczalcz 5.5%</option>
+        <option value="rycz3">Ryczalcz 3%</option>
+        <option value="rycz2">Ryczalcz 2%</option>
+        <option value="progresywny">Progresywny</option>
+    </select><br><br>
+    <button type="button" onclick="Calculator(this.innerHTML)">Licz</button> 
+</form>
+</body>
+</html>
