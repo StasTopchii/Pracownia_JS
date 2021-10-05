@@ -1,0 +1,56 @@
+#title {
+    height: 10%;
+    width: 100%;
+    background-color: green;
+}
+
+#lewy {
+    height: 80%;
+    width: 50%;
+    float: left;
+    background-color: red;
+}
+
+#prawy {
+    height: 80%;
+    width: 50%;
+    float: right;
+    background-color: blue;
+}
+
+#stopka {
+    float: left;
+    height: 10%;
+    width: 100%;
+    background-color: #600201;
+}
+
+#title>img {
+    margin-left: 15px;
+    margin-top: 8px;
+    float:left;
+}
+
+#title > p {
+    margin-left: 47%;
+    
+}
+
+#prawy.knopka {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#stopka > #ryc > img{
+    margin-top: 5px;
+    margin-left: 5%;
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+#stopka > #smok > img{
+    margin-left: 45%;
+    margin-top: 5px;
+    height: 80px;
+    width: 80px;
+}

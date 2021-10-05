@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="title">
+        <img src="flag.png" alt="Tekst alternatywny" width="100px" height="80px">
+        <p>Bitwa Europejska</p>
+    </div>
+    <div id="lewy">
+        <h2>Nasza armia sklada sie z </h2>
+        <div id="nasza"></div>
+        <h2>Armia wroga sklada sie z </h2>
+        <div id="wroga"></div>
+    </div>
+    <div id="prawy">
+        <h2>Artyleria &nbsp&nbsp&nbsp&nbsp<input type="number" id="art" name="name" size="3"><br> 
+           
+            Kawaleria &nbsp<input type="number" id="kaw" name="name" size="3"><br> 
+          
+            Muszketery<input type="number" id="mus" name="name" size="3"><br></h2>
+        <button class="knopka" type="button" onclick="Pokaz1()" value="Pokaz">Nasza</button>
+        <button class="knopka" type="button" onclick="Pokaz2()" value="Pokaz">Wroga</button>
+    </div>
+    <div id="stopka">
+       <div id="ryc"></div> 
+       <div id="smok"></div>
+    </div>
+        
+        
+        <script type="text/javascript">
+        function kolorki(){
+            var kolor = Math.floor(Math.random()*99999)+66666;
+            document.getElementById("title").style.color = "#"+kolor;
+        }
+            function Pokaz1() {
+                kolorki();
+                var licz1 = parseInt(art.value);
+                var licz2 = parseInt(kaw.value);
+                var licz3 = parseInt(mus.value);
+                nasza.innerHTML = "Artyleria " + licz1 + "<br>Kawaleria " + licz2 + "<br>Muszketery " + licz3;
+                ryc.innerHTML= "<img src = \"rycerz.gif\">";
+            }
+
+            function Pokaz2()  {
+                kolorki();
+                var licz1 = parseInt(art.value);
+                var licz2 = parseInt(kaw.value);
+                var licz3 = parseInt(mus.value);
+
+                var los1 = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+                var los2 = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+                var los3 = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+
+                var wr1 = Math.pow(licz1,los1);
+                var wr2 = Math.pow(licz2,los2);
+                var wr3 = Math.pow(licz3,los3);
+
+
+                wroga.innerHTML = "Artyleria " + wr1 + "<br>Kawaleria " + wr2 + "<br>Muszketery " + wr3;
+                smok.innerHTML= "<img src = \"smok.gif\">";
+            }  
+        </script>
+</body>
+
+</html>
