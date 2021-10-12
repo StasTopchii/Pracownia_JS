@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Charakter</title>
+    </head>
+
+    <body>
+    <div id="image">
+        <div id="ava"></div>
+    </div>
+    <div id="dane_wpisowe">
+        <p>Nick</p> <input type="text" id="nick"><br><br>
+        <p>Klasa</p>
+        <select name="klasy" id="klasa_select" onchange="myFunction()">
+            <option value="">--Please choose an option--</option>
+            <option value="Wojownik">Wojownik</option>
+            <option value="Czarodziej">Czarodziej</option>
+            <option value="Bard">Bard</option>
+            <option value="Druid">Druid</option>
+        </select>
+        <p id="hp_postaci"></p>
+        <p id="mana_postaci"></p>
+        <p id="str_postaci"></p>
+        <p id="ag_postaci"></p>
+        <p id="inte_postaci"></p>
+        <p id="gold_postaci"></p>
+        <h3>Inventory</h3>
+        <div id="zd_inv"></div>
+        <p id="inwent"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
