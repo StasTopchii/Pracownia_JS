@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12</title>
+    </head>
+    <body>
+        <form>
+            armour&nbsp<input type="number" name="arm"><br /><br />
+            damage&nbsp<input type="number" name="dmg"><br /><br />
+            <input type="radio" name="wybor">5%<input type="radio" name="wybor">10%<input type="radio" name="wybor">20%<br />
+            <input type="checkbox" name="c5">-5%<input type="checkbox" name="c10">-10%<input type="checkbox" name="c20">-20%
+            <br /><br /><input type="button" onclick="myFunction(this.form)" value="Oppss..">
+            <table>
+                <tr id="wynik"></tr>
+            </table>
+        </form>
+        <script>
+            function myFunction(dane){
+                wynik.innerHTMl=" ";
+                var s=0;
+                if(dane.wybor[0].checked){
+                    s = (parseFloat(dane.arm.value)*1.05)-parseFloat(dane.dmg.value);
+                }
+                if(dane.wybor[1].checked){
+                     var a = ((parseFloat(dane.arm.value)*1.1)-parseFloat(dane.dmg.value));
+                     s= a.toFixed(1);
+                }
+                if(dane.wybor[2].checked){
+                    s = ((parseFloat(dane.arm.value)*1.2)-parseFloat(dane.dmg.value));
+                }
+                if(dane.c5.checked == true){
+                    s=s*0.95;
+                }
+                if(dane.c10.checked == true){
+                    s=s*0.90;
+                }
+                if(dane.c20.checked == true){
+                    s=s*0.80;
+                }
+                wynik.innerHTML="Zostalo "+s;
+            }
+        </script>
+    </body>
+</html>

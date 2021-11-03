@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #money{
+                display: flex;
+            }
+            #torebka{
+                float: left;
+            }
+            #towary{
+                float: right;
+            }
+            #sprzedaz{
+                clear: both;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+    <form>
+        <h1>SKLEP</h1>
+        <div id="gold">4000</div>
+        <h2>Torebka</h2>
+        <div id="torebka"></div>
+        <div id="towary">
+            <select name="lista1">
+                <option value="ps5">PS5</option>
+                <option>PS4</option>
+            </select><br />
+            <input type="button" value="KUP" onclick="kup(this.form)">
+        </div>
+        <div id="sprzedaz">
+            <select name="lista2">
+                <option></option>
+                <option></option>
+            </select><br />
+            <input type="button" value="SPRZEDAJ" onclick="sprz(this.form)">
+        </div>
+    </form>
+        <script>
+            function kup(dane){
+                var money = document.getElementById("gold").innerHTML;
+                if(lista1 = "ps5"){
+                    if(money>=1000){
+                        money=money-1000;
+                        torebka.innerHTML+="PS5<br />";
+                    }
+                }
+                gold.innerHTML=money;
+            }
+            function sprz(){
+
+            }
+        </script>
+    </body>
+</html>

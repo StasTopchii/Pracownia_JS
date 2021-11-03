@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12</title>
+    </head>
+    <body>
+        <form>
+            Cena&nbsp<input type="number" name="cena"><br /><br />
+            Ilosc&nbsp<input type="number" name="ilosc"><br /><br />
+            <input type="radio" name="wybor">5%<input type="radio" name="wybor">10%<input type="radio" name="wybor">20%
+            <br /><br /><input type="button" onclick="myFunction(this.form)" value="Suma">
+            <table>
+                <tr id="wynik"></tr>
+            </table>
+        </form>
+        <script>
+            function myFunction(dane){
+                wynik.innerHTMl=" ";
+                var s=0;
+                if(dane.wybor[0].checked){
+                    s = (parseFloat(dane.cena.value)*parseFloat(dane.ilosc.value))*0.95;
+                }
+                if(dane.wybor[1].checked){
+                    s = (parseFloat(dane.cena.value)*parseFloat(dane.ilosc.value))*0.9;
+                }
+                if(dane.wybor[2].checked){
+                    s = (parseFloat(dane.cena.value)*parseFloat(dane.ilosc.value))*0.8;
+                }
+                wynik.innerHTML="Suma "+s;
+            }
+        </script>
+    </body>
+</html>
